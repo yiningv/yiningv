@@ -31,9 +31,7 @@ jobs:
       - name: Clone and run waka-box
         run: |-
           git clone https://github.com/yiningv/waka-box.git
-          cd waka-box && pip install -r requirements.txt
-          python wakabox.py
-          cd .. && rm -rf waka-box/
+          cd waka-box && pip install -r requirements.txt && python wakabox.py && cd .. && rm -rf waka-box/
           
       - name: Commit and push
         run: |-
