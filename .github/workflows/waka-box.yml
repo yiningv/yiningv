@@ -33,10 +33,10 @@ jobs:
           git clone https://github.com/yiningv/waka-box.git
           cd waka-box && pip install -r requirements.txt
           cp wakabox.py ../ && cd .. && rm -rf waka-box
-          python wakabox.py
           
       - name: Commit and push
         run: |-
+          python wakabox.py
           git config --global user.email "bot@github.com" && git config --global user.name "Waka-Bot"
           git diff
           git add README.md && git commit -m ":memo: update profile" || exit 0
